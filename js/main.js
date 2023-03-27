@@ -66,7 +66,7 @@ function isValidPassword(password) {
 function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
     let message;
     // Change code below this line
-    const totalPrice = (pricePerDroid * orderedQuantity);
+    const totalPrice = pricePerDroid * orderedQuantity;
     
     if(totalPrice > customerCredits){
       message = "Insufficient funds!";
@@ -101,7 +101,115 @@ function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
   checkPassword('polyhax')
  
 
-const age = 17;
-console.log(age > 16 && age < 18);
+function checkIfCanAccessContent(subType) {
+  const canAccessContent = (subType === "pro" || subType === "vip"); // Change this line
 
+  return canAccessContent;
+}
+
+console.log(checkIfCanAccessContent("pro"))
+console.log(checkIfCanAccessContent('free'))
+console.log(checkIfCanAccessContent('vip'))
+
+
+const userNickname = "alxkba";
+const userExpierence = "few mounth";
+
+console.log(`Hello ${userNickname}, you study ${userExpierence}`);
+
+
+  // Change code below this line
+ 
+  function getShippingCost(country) {
+    let message;
+    // Change code below this line
+  switch(country){
+    case country = "China":
+      message = "Shipping to China will cost 100 credits"; 
+      break;
+    case country = "Chile":
+      message = "Shipping to Chile will cost 250 credits";
+      break;
+    case country = "Australia":
+      message = "Shipping to Australia will cost 170 credits";
+      break;
+    case country = "Jamaica":
+      message = "Shipping to Jamaica will cost 120 credits"
+      break;
+    default:
+      message = "Sorry, there is no delivery to your country"
+      ;
+  }
+    // Change code above this line
+    return message;
+  }
+  console.log(getShippingCost("China"));
+  console.log(getShippingCost("Chile"));
+  console.log(getShippingCost("Australia"));
+  console.log(getShippingCost("Jamaica"));
+  console.log(getShippingCost("Germany"));
+  console.log(getShippingCost("Sweden"));
+
+  function getNameLength(name) {
+    const message = `Name ${name} is ${name.length} characters long`; // Change this line
+  
+    return message;
+  }
+  console.log(getNameLength("Oleksii"));
+
+
+const courseTopic = "JavaScript essentials";
+// Change code below this line
+
+const courseTopicLength = courseTopic.length;
+const firstElement = courseTopic[0];
+const lastElement = courseTopic[courseTopic.length - 1];
+
+// Change code above this line
+console.log(courseTopicLength);
+console.log(firstElement);
+console.log(lastElement);
+
+
+
+
+function formatMessage(message, maxLength) {
+  let result;
+  // Change code below this line
+  if(message.length <= maxLength){
+    result = message;
+  }
+  else{
+    result = message.slice(0, maxLength) + "...";
+  }
+  /// Change code above this line
+  return result;
+}
+console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 20));
+
+function checkForName(fullName, name) {
+  const result = fullName.includes(name); // Change this line
+   return result;
+ }
+ console.log(checkForName("Oleksii Kaba" , "Oleksii"));
+
+
+
+ function checkForSpam(message) {
+  let result;
+  // Change code below this line
+
+  if(message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")){
+    result = true;
+}
+  else{
+    result = false;
+  }
+  // Change code above this line
+  return result;
+}
+
+
+console.log(checkForSpam("Latest technology news"));
+console.log(checkForSpam('Get best sale offers now!'));
 
